@@ -1,0 +1,4 @@
+.botpress
+.idea
+node_modules/
+*.iml
