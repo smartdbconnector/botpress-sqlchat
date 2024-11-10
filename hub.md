@@ -1,8 +1,6 @@
-# SQL chat [text2sql]
+# SQL chat [text2sql] by SmartDbConnector.com
 Connect and chat with your databases without writing SQL code.
-Supports MySQL, PostgreSQL. 
-
-by [SmartDbConnector](https://smartdbconnector.com/?utm_source=botpress&utm_medium=info)
+Supports MySQL, PostgreSQL.
 
 ## Setup
 
