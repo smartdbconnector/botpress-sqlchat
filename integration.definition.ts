@@ -22,7 +22,7 @@ export default new IntegrationDefinition({
         schema: z.object({
           question: z.string().describe('text query'),
           onlyData: z.boolean().describe('whether to receive one row data as a text answer'),
-          dataAsArray: z.boolean().describe('whether to receive data as array, when false the default data structure is used'),
+          format: z.optional(z.enum(["JSON_ARRAY", "CSV", "MARKDOWN"])).describe('format of API output'),
         }),
       },
       output: {

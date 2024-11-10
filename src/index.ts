@@ -7,7 +7,7 @@ export default new bp.Integration({
   register: async ({ctx}) => {
     try {
       await axios.default.get(
-          `${url}/api/signal?type=botpress_integration_installed`,
+          `${url}/api/signal?signal=botpress_integration_installed`,
           {
             headers: {
               'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export default new bp.Integration({
   unregister: async ({ctx}) => {
     try {
       await axios.default.get(
-          `${url}/api/signal?type=botpress_integration_removed`,
+          `${url}/api/signal?signal=botpress_integration_removed`,
           {
             headers: {
               'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ export default new bp.Integration({
   actions: {
     answerSql: async ({ input, ctx, logger }) => {
       try {
-        const {question, onlyData = false, dataAsArray = false} = input;
+        const {question, onlyData = false, format = null} = input;
 
         logger.forBot().info('check')
 
@@ -48,7 +48,7 @@ export default new bp.Integration({
 
         const response = await axios.default.post(
             `${url}/api/assistant/ask`,
-            {question, dataAsArray, onlyData},
+            {question, format, onlyData},
             {
               headers: {
                 'Content-Type': 'application/json',
