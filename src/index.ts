@@ -6,7 +6,7 @@ const url = "https://api.smartdbconnector.com"
 export default new bp.Integration({
   register: async ({ctx}) => {
     try {
-      await axios.default.post(
+      await axios.default.get(
           `${url}/api/signal?type=botpress_integration_installed`,
           {
             headers: {
@@ -21,7 +21,7 @@ export default new bp.Integration({
   },
   unregister: async ({ctx}) => {
     try {
-      await axios.default.post(
+      await axios.default.get(
           `${url}/api/signal?type=botpress_integration_removed`,
           {
             headers: {
