@@ -5,7 +5,7 @@ a database without SQL (using AI).
 ## Install
 
 ```bash
-git clone git@github.com:smartdbconnector/botpress-sqlchat.git
+git clone https://github.com/smartdbconnector/botpress-sqlchat.git
 cd botpress-sqlchat
 npm i --save-dev @botpress/cli nodemon
 npm i
