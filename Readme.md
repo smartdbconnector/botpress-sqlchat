@@ -1,7 +1,7 @@
 ### "SQL chat" botpress smart db integration
 
 This integration brings text2sql capabilities to botpress making it possible to chat to 
-a database without SQL (using AI).
+a database without SQL (using [SmartDBConnector API](https://smartdbconnector.com/api))
 ## Install
 
 ```bash
